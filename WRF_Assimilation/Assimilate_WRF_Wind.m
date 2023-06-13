@@ -1,10 +1,10 @@
-%% The program for calculating wind assimilation coefficients for western LIS
+%% The program for calculating wind modification coefficients for western LIS
 %
 % WRF underestimates wind speed at western LIS by 75%
-% Here calculate assimilation coefficients for wind at WLIS buoy
+% Here calculate modifications coefficients for wind at WLIS buoy
 % The eastern, western, northern, and southern winds assimilated with
 % different coefficient as the underestimation coefficient of WRF are
-% directionally dependent. Only wind speeds larger than 3m/s are assimilated
+% directionally dependent. Only wind speeds larger than 3m/s are modified
 %
 % Oct 2019
 % Amin Ilia - University of Connecticut, Groton, CT% 
