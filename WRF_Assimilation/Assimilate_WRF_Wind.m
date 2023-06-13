@@ -1,3 +1,4 @@
+%% June 2023 (Assimilation was replaced by modification in order not to be confused with Data Assimilation by models)
 %% The program for calculating wind modification coefficients for western LIS
 %
 % WRF underestimates wind speed at western LIS by 75%
@@ -82,7 +83,7 @@ cfx=ones(size(wx_mod),'like', wx_mod);  % assimilation factor array x
 cfy=ones(size(wy_mod),'like', wy_mod);  % assimilation factor array y
 
 cal=1;  % calibratcfyion factor when there is no observation
-trmax=2.0; % treshold for max assimalation factor
+trmax=2.0; % treshold for max factor
 
 for i=1:length(iw_m)
     
