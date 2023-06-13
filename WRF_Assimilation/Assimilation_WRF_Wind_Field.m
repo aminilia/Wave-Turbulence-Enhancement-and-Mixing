@@ -1,3 +1,4 @@
+%% June 2023 (Assimilation was replaced by modification in order not to be confused with Data Assimilation by models)
 %% Program to modifying WRF wind field
 % Only modified data from lon -73.8 to -72.7  and lat 40.8 to 41.3 in LIS
 % Oct 2019, 
@@ -10,15 +11,15 @@ clear all
 % load wind data
 load('WRF.mat')
 
-% load assimilation coafficient along LIS
+% load coafficient along LIS
 load('cf_lon.mat')
 
-%% Found points that assimilate
+%% Found points that modify
 
 ap=(WRF.XLONG>=-73.8 & WRF.XLONG<=-72.655 & WRF.XLAT>=40.8 & WRF.XLAT<=41.3);
 
 
-%% Assimilate Western Points
+%% Modify Western Points
 % Note: time steps are the same in WRF and FVCOM therefore no need for
 % temporal interpolation.
 % However the WRF extends 10 days into 2015 therefore the number of
@@ -28,7 +29,7 @@ WRFm=WRF;
 
 [ia,ja]=find(ap==1);
 for i=1:length(ia)
-    [~,ip(i)]=min(abs(WRF.XLONG(ia(i),ja(i))-lonm)); % find the closest point in calculated assimlation coafficients
+    [~,ip(i)]=min(abs(WRF.XLONG(ia(i),ja(i))-lonm)); % find the closest point in calculated modification coafficients
     
     for k=1:size(cfxl,1)   % time
         WRFm.U10(ia(i),ja(i),k)=WRFm.U10(ia(i),ja(i),k).*cfxl(k,ip(i));      % modify wind speed vector u
