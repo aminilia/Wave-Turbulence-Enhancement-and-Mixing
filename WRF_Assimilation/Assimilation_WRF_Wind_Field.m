@@ -1,5 +1,5 @@
-%% Program to assimilate WRF wind field
-% Only assimilate data from lon -73.8 to -72.7  and lat 40.8 to 41.3 in LIS
+%% Program to modifying WRF wind field
+% Only modified data from lon -73.8 to -72.7  and lat 40.8 to 41.3 in LIS
 % Oct 2019, 
 % Amin Ilia - University of Connecticut, Groton, CT% 
 
